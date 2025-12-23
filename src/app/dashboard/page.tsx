@@ -371,7 +371,12 @@ export default async function DashboardPage() {
 
               {lowStock && lowStock.length > 0 ? (
                 <div className="space-y-4">
-                  {lowStock.map((item, i) => (
+                  {lowStock.map((item, i) => {
+                    const product = Array.isArray(item.products)
+                      ? item.products[0]
+                      : item.products;
+
+                    return (
                     <div key={i} className="p-4 bg-red-50 border border-red-100 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
@@ -379,9 +384,9 @@ export default async function DashboardPage() {
                             <Package className="w-4 h-4 text-red-600" />
                           </div>
                           <div>
-                            <p className="font-medium text-gray-900">{item.products?.name}</p>
-                            {item.products?.brand && (
-                              <p className="text-sm text-gray-600">{item.products.brand}</p>
+                            <p className="font-medium text-gray-900">{product?.name}</p>
+                            {product?.brand && (
+                              <p className="text-sm text-gray-600">{product.brand}</p>
                             )}
                           </div>
                         </div>
@@ -389,12 +394,13 @@ export default async function DashboardPage() {
                       </div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="px-2 py-1 bg-red-100 text-red-700 rounded-md">
-                          {item.products?.category || "Umum"}
+                          {product?.category || "Umum"}
                         </span>
                         <span className="text-red-600 font-medium">Sisa {item.quantity} unit</span>
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                   
                   <div className="pt-4 border-t border-gray-100">
                     <Link
