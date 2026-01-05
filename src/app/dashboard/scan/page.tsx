@@ -166,64 +166,62 @@ export default function ScanPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-6">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-2 sm:p-4 md:p-6">
+      <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-4">
-              <Link 
-                href="/dashboard"
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors shadow-sm"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span className="text-sm font-medium">Kembali ke Dashboard</span>
-              </Link>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
-                  <ScanLine className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Scan Produk</h1>
-                  <p className="text-gray-600 text-sm">Pindai produk baru dengan AI</p>
-                </div>
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 sm:mb-6">
+            <Link 
+              href="/dashboard"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white border border-gray-300 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-colors shadow-sm text-xs sm:text-sm"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span className="font-medium">Kembali</span>
+            </Link>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <ScanLine className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">Scan Produk</h1>
+                <p className="text-gray-600 text-xs sm:text-sm">Pindai produk baru dengan AI</p>
               </div>
             </div>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 mb-1">Cara Scan</p>
-                  <p className="text-lg font-bold text-gray-900">Upload atau Kamera</p>
+          {/* Quick Stats - Stack on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
+            <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Cara Scan</p>
+                  <p className="text-sm sm:text-lg font-bold text-gray-900 truncate">Upload / Kamera</p>
                 </div>
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Camera className="w-5 h-5 text-blue-600" />
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 mb-1">Ekstrak Otomatis</p>
-                  <p className="text-lg font-bold text-gray-900">AI Powered</p>
+            <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Ekstrak Otomatis</p>
+                  <p className="text-sm sm:text-lg font-bold text-gray-900 truncate">AI Powered</p>
                 </div>
-                <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <ScanLine className="w-5 h-5 text-green-600" />
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-600 mb-1">Simpan Data</p>
-                  <p className="text-lg font-bold text-gray-900">Ke Inventory</p>
+            <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Simpan Data</p>
+                  <p className="text-sm sm:text-lg font-bold text-gray-900 truncate">Ke Inventory</p>
                 </div>
-                <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Save className="w-5 h-5 text-purple-600" />
                 </div>
               </div>
@@ -231,24 +229,24 @@ export default function ScanPage() {
           </div>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Main Content Grid - Responsive layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {/* Left Column - Scan Methods */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Upload Card */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-6">
+            <div className="bg-white rounded-lg sm:rounded-2xl border border-gray-200 shadow-lg p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Upload className="w-5 h-5 text-blue-600" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Upload Gambar</h3>
-                  <p className="text-sm text-gray-600">Upload foto produk yang sudah ada</p>
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 truncate">Upload Gambar</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">Foto produk yang sudah ada</p>
                 </div>
               </div>
 
               <div className="mb-4">
-                <label className="block mb-2 text-sm font-medium text-gray-700">
+                <label className="block mb-2 text-xs sm:text-sm font-medium text-gray-700">
                   Pilih file gambar (JPG, PNG, WebP)
                 </label>
                 <input
@@ -257,48 +255,48 @@ export default function ScanPage() {
                   accept="image/*"
                   onChange={handleFileUpload}
                   disabled={isLoading}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="block w-full text-xs sm:text-sm text-gray-500 file:mr-2 sm:file:mr-4 file:py-2 sm:file:py-3 file:px-3 sm:file:px-4 file:rounded-lg file:border-0 file:text-xs sm:file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed"
                 />
               </div>
 
               {isLoading && (
                 <div className="flex items-center gap-2 text-blue-600">
                   <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                  <span className="text-sm">Memproses gambar...</span>
+                  <span className="text-xs sm:text-sm">Memproses gambar...</span>
                 </div>
               )}
             </div>
 
             {/* Camera Card */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-6">
+            <div className="bg-white rounded-lg sm:rounded-2xl border border-gray-200 shadow-lg p-4 sm:p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Camera className="w-5 h-5 text-green-600" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Scan Langsung</h3>
-                  <p className="text-sm text-gray-600">Gunakan kamera untuk scan langsung</p>
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 truncate">Scan Langsung</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">Gunakan kamera</p>
                 </div>
               </div>
-              <div className={`border-2 border-dashed border-gray-300 rounded-xl overflow-hidden ${isLoading ? 'opacity-50' : ''}`}>
+              <div className={`border-2 border-dashed border-gray-300 rounded-lg sm:rounded-xl overflow-hidden ${isLoading ? 'opacity-50' : ''}`}>
                 <ScanCamera onScan={handleScan} />
               </div>
             </div>
           </div>
 
           {/* Right Column - Form Results */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Form Results Card */}
             {form && (
-              <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+              <div className="bg-white rounded-lg sm:rounded-2xl border border-gray-200 shadow-lg p-4 sm:p-6">
+                <div className="flex items-center justify-between mb-6 gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="w-5 h-5 text-green-600" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">Hasil Scan</h3>
-                      <p className="text-sm text-gray-600">Periksa dan edit data produk</p>
+                    <div className="min-w-0">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 truncate">Hasil Scan</h3>
+                      <p className="text-xs sm:text-sm text-gray-600">Periksa dan edit data</p>
                     </div>
                   </div>
                   <button
@@ -309,61 +307,61 @@ export default function ScanPage() {
                       setError(null);
                       if (fileInputRef.current) fileInputRef.current.value = "";
                     }}
-                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
                   >
                     <X className="w-5 h-5 text-gray-500" />
                   </button>
                 </div>
 
                 {/* Form Fields */}
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 mb-6 max-h-96 overflow-y-auto pr-2">
                   {formFields.map((field) => (
                     <div key={field.key} className="space-y-2">
-                      <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                        <field.icon className="w-4 h-4" />
-                        {field.label}
+                      <label className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-700">
+                        <field.icon className="w-4 h-4 flex-shrink-0" />
+                        <span className="truncate">{field.label}</span>
                       </label>
                       <input
                         type={field.type}
                         value={form[field.key] as string}
                         onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm"
                         placeholder={`Masukkan ${field.label.toLowerCase()}...`}
                       />
                     </div>
                   ))}
 
                   {/* Stock Controls */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-2">
-                      <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                        <Box className="w-4 h-4" />
-                        Jenis Transaksi
+                      <label className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-700">
+                        <Box className="w-4 h-4 flex-shrink-0" />
+                        <span className="truncate">Transaksi</span>
                       </label>
                       <div className="relative">
                         <select
                           value={form.type}
                           onChange={(e) => setForm({ ...form, type: e.target.value as "IN" | "OUT" })}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white text-sm"
                         >
                           <option value="IN">Stok Masuk</option>
                           <option value="OUT">Stok Keluar</option>
                         </select>
-                        <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
+                        <ChevronDown className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                        <Package className="w-4 h-4" />
-                        Jumlah
+                      <label className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-700">
+                        <Package className="w-4 h-4 flex-shrink-0" />
+                        <span className="truncate">Jumlah</span>
                       </label>
                       <input
                         type="number"
                         min={1}
                         value={form.qty}
                         onChange={(e) => setForm({ ...form, qty: Number(e.target.value) })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
                       />
                     </div>
                   </div>
@@ -373,17 +371,17 @@ export default function ScanPage() {
                 <button
                   onClick={saveToInventory}
                   disabled={isSaving}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3.5 px-4 rounded-lg hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-2.5 sm:py-3.5 px-4 rounded-lg hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
                   {isSaving ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Menyimpan...
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <span>Menyimpan...</span>
                     </>
                   ) : (
                     <>
-                      <Save className="w-5 h-5" />
-                      Simpan ke Inventory
+                      <Save className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span>Simpan</span>
                     </>
                   )}
                 </button>
@@ -392,22 +390,22 @@ export default function ScanPage() {
 
             {/* Error Message */}
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-5 flex items-start gap-3 animate-in fade-in">
+              <div className="bg-red-50 border border-red-200 rounded-lg sm:rounded-2xl p-4 sm:p-5 flex items-start gap-3 animate-in fade-in">
                 <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-medium text-red-800">Error</h4>
-                  <p className="text-sm text-red-600 mt-1">{error}</p>
+                <div className="min-w-0">
+                  <h4 className="font-medium text-red-800 text-sm">Error</h4>
+                  <p className="text-xs sm:text-sm text-red-600 mt-1 break-words">{error}</p>
                 </div>
               </div>
             )}
 
             {/* Success Message */}
             {success && (
-              <div className="bg-green-50 border border-green-200 rounded-2xl p-5 flex items-start gap-3 animate-in fade-in">
+              <div className="bg-green-50 border border-green-200 rounded-lg sm:rounded-2xl p-4 sm:p-5 flex items-start gap-3 animate-in fade-in">
                 <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-medium text-green-800">Sukses</h4>
-                  <p className="text-sm text-green-600 mt-1">{success}</p>
+                <div className="min-w-0">
+                  <h4 className="font-medium text-green-800 text-sm">Sukses</h4>
+                  <p className="text-xs sm:text-sm text-green-600 mt-1 break-words">{success}</p>
                   <p className="text-xs mt-2 text-green-500">
                     Mengarahkan ke halaman inventory...
                   </p>
@@ -417,29 +415,29 @@ export default function ScanPage() {
 
             {/* Raw Output Card */}
             {raw && (
-              <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+              <div className="bg-white rounded-lg sm:rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
                 <button
                   onClick={() => setShowRaw(!showRaw)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Hash className="w-4 h-4 text-gray-600" />
                     </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Raw AI Output</h4>
-                      <p className="text-sm text-gray-600">Data mentah dari AI</p>
+                    <div className="min-w-0">
+                      <h4 className="font-medium text-gray-900 text-sm truncate">Raw AI Output</h4>
+                      <p className="text-xs text-gray-600">Data mentah dari AI</p>
                     </div>
                   </div>
                   <ChevronDown 
-                    className={`w-5 h-5 text-gray-500 transition-transform ${showRaw ? 'rotate-180' : ''}`}
+                    className={`w-5 h-5 text-gray-500 transition-transform flex-shrink-0 ${showRaw ? 'rotate-180' : ''}`}
                   />
                 </button>
                 
                 {showRaw && (
-                  <div className="px-6 py-4 border-t border-gray-200">
-                    <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                      <pre className="text-sm whitespace-pre-wrap font-mono">{raw}</pre>
+                  <div className="px-4 sm:px-6 py-4 border-t border-gray-200">
+                    <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto">
+                      <pre className="text-xs sm:text-sm whitespace-pre-wrap font-mono break-words">{raw}</pre>
                     </div>
                   </div>
                 )}
@@ -449,11 +447,12 @@ export default function ScanPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+        <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200 text-center text-xs sm:text-sm text-gray-500 px-2">
           <p>Gunakan kamera atau upload gambar dengan label produk yang jelas untuk hasil terbaik</p>
         </div>
       </div>
     </div>
   );
+}
 }
 
