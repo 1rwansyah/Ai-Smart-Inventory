@@ -20,15 +20,15 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: [Next.js 14](https://nextjs.org/) (App Router), TypeScript, Tailwind CSS.
-- **AI Integration**: [Google Gemini Pro Vision AI](https://ai.google.dev/).
-- **Backend & Database**: [Supabase](https://supabase.com/) (PostgreSQL & Auth).
-- **Notification**: Node.js (Nodemailer / Edge Functions) untuk Email Alert.
+- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS.
+- **AI Integration**: Google Gemini Pro Vision AI.
+- **Backend & Database**: Supabase (PostgreSQL & Auth).
+- **Notification**: Node.js (Nodemailer) untuk Email Alert.
 - **Deployment**: Vercel.
 
 ---
 
-##  Cara Instalasi
+## 📦 Cara Instalasi
 
 1. **Clone Repository**
    ```bash
@@ -45,7 +45,7 @@ npm install
 
 
 3. **Konfigurasi Environment Variable**
-Buat file `.env.local` dan masukkan API Key Anda:
+Buat file `.env.local` di root folder dan masukkan API Key Anda:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
@@ -66,7 +66,7 @@ npm run dev
 
 ## 💡 Alur Kerja AI
 
-Sistem ini menggunakan prompt teknik khusus ke **Gemini AI** untuk menganalisis gambar yang diunggah pengguna. AI akan mengembalikan data berformat JSON yang kemudian secara otomatis mengisi formulir stok, sehingga user tidak perlu mengetik manual (Zero-Typing Experience).
+Sistem ini menggunakan teknik prompt khusus ke **Gemini AI** untuk menganalisis gambar yang diunggah pengguna. AI akan mengembalikan data berformat JSON yang kemudian secara otomatis mengisi formulir stok, sehingga user tidak perlu mengetik manual (**Zero-Typing Experience**).
 
 ---
 
@@ -76,15 +76,11 @@ Proyek ini dikembangkan oleh **Muhammad Irwansyah**. Jika Anda memiliki saran at
 
 ---
 
-Copyright © 2024 [Muhammad Irwansyah](https://www.google.com/search?q=https://github.com/1rwansyah)
 
-```
+1. **Blok Kode**: Menyatukan perintah `git clone` dan `cd` agar tidak terpisah-pisah.
+2. **Formatting**: Menghilangkan link URL mentah di dalam teks agar tampilan Markdown lebih bersih.
+3. **Pembersihan**: Menghapus teks "Mengapa README ini bagus" dan sisa komentar saya agar file benar-benar siap tayang di GitHub.
 
-### Mengapa README ini bagus?
-1.  **Badge Visual**: Menggunakan badge warna-warni untuk teknologi utama (Next.js, AI, Supabase).
-2.  **Struktur Jelas**: Ada deskripsi, fitur, tech stack, hingga cara instalasi.
-3.  **Menonjolkan Skill**: Bagian "Alur Kerja AI" menunjukkan bahwa kamu bukan cuma pakai API, tapi paham cara kerjanya.
-
-Mau saya buatkan juga file README untuk proyek lainnya seperti **AI Travel** atau **Circle Twitter Clone**?
+Apakah Anda ingin saya membuatkan versi serupa untuk proyek **AI Travel** atau **Elektronik Shop**?
 
 ```
